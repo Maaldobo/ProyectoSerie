@@ -1,19 +1,23 @@
-import { useState } from "react";
+import { useState } from 'react';
 import { Form } from './components/Form';
 import { Resultado } from './components/Resultado';
+import { Calculador } from './components/Operaciones';
+
 
 function App() {
   const [n, setN] = useState(null);
+  const [result, setResult] = useState(null);
 
   return (
     <>
       <div>
-        <h1>Series Calculator</h1>
+        <h1>Calculadora de Serie</h1>
         <Form setN={setN} />
-        <Resultado n={n} />
+        <Calculador n={n} onResult={setResult} />
+        <Resultado result={result} />
       </div>
     </>
   );
 }
 
-export default App
+export default App;
