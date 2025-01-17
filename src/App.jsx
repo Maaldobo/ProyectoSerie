@@ -1,22 +1,22 @@
 import { useState } from 'react';
-import { Form } from './components/Form';
+ import { Form } from './components/Form';
 import { Resultado } from './components/Resultado';
-import { Calculador } from './components/Operaciones';
+import { Calculador } from './services/Operaciones.mjs';
 
 
 function App() {
-  const [n, setN] = useState(null);
+  const [number, setNumber] = useState(null);
   const [result, setResult] = useState(null);
 
   return (
-    <>
+   
       <div>
         <h1>Calculadora de Serie</h1>
-        <Form setN={setN} />
-        <Calculador n={n} onResult={setResult} />
-        <Resultado result={result} />
+        <Form setNumber={setNumber} />
+        <Calculador number={number} onResult={setResult} />
+        <Resultado result={result} /> 
       </div>
-    </>
+    
   );
 }
 

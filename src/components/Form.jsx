@@ -1,26 +1,28 @@
-import { useState } from 'react';
-
-export function Form({ setN }) {
-  const [inputValue, setInputValue] = useState('');
+export function Form({ setNumber }) {
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const formData = new FormData(e.target);
+    const inputValue = formData.get('numberInput');
     const parsedValue = parseInt(inputValue, 10);
     if (!isNaN(parsedValue) && parsedValue > 0) {
-      setN(parsedValue);
+      setNumber(parsedValue);
     } else {
-      alert('Introduce un número válido mayor que 0');
+      alert('Introduce un número válido mayor de 0');
     }
   };
 
+
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="nInput">Introduce un número:</label>
+      <label htmlFor="numberInput">Introduce un número:</label>
       <input
-        id="nInput"
+        id="numberInput"
         type="number"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
+        name="numberInput"
+        min="1"
+        
       />
       <button type="submit">Calcular</button>
     </form>
