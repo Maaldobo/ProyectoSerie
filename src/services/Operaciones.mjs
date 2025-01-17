@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 export function getFibonacci(number) {
   if (typeof number !== "number" || number <= 0) {
     return -2; // Entrada inválida
