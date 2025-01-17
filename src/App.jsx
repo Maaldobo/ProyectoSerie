@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Form } from './components/Form';
+ import { Form } from './components/Form';
 import { Resultado } from './components/Resultado';
 import { Calculador } from './services/Operaciones.mjs';
 
@@ -14,7 +14,7 @@ function App() {
         <h1>Calculadora de Serie</h1>
         <Form setNumber={setNumber} />
         <Calculador number={number} onResult={setResult} />
-        <Resultado result={result} />
+        <Resultado result={result} /> 
       </div>
     
   );

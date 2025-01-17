@@ -9,7 +9,7 @@ export function Form({ setNumber }) {
     if (!isNaN(parsedValue) && parsedValue > 0) {
       setNumber(parsedValue);
     } else {
-      alert('Introduce un número válido mayor de 2');
+      alert('Introduce un número válido mayor de 0');
     }
   };
 
@@ -21,7 +21,7 @@ export function Form({ setNumber }) {
         id="numberInput"
         type="number"
         name="numberInput"
-        min="0"
+        min="1"
         
       />
       <button type="submit">Calcular</button>
