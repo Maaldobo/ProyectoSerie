@@ -22,16 +22,6 @@ cd calculadora-serie
 - Instala las dependencias
 npm install
 
-## Estructura
-/src
-├── components
-│   ├── Form.jsx         # Componente para ingresar el número
-│   ├── Resultado.jsx    # Componente para mostrar el resultado
-├── services
-│   ├── Operaciones.mjs  # Funciones matemáticas principales
-├── App.jsx              # Componente raíz
-└── index.js             # Punto de entrada de la aplicación
-
 ## Tecnologias
 - React.js
 - JavaScript (ES6+)
